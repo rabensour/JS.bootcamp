@@ -1,29 +1,245 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en" dir="ltr">
 <head>
-	<title>Robot-Friends</title>
-	<link rel = "stylesheet" href = "style.css">
-	<script src="jquery-3.5.1.min.js"></script>
-	<script src ="script.js"></script>	
+<title>Robofriends</title>
+    <style>
+
+@font-face {
+            font-family: 'sega_logo_fontregular';
+            src: url('sega-webfont.woff2') format('woff2'),
+                url('sega-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+        body {
+            width: 100wh;
+            /* height: auto; */
+            margin: 0;
+
+        }
+      
+        .nav {
+            background-color: #6ADF82;
+            padding-top: 8px;
+            height: 3.2rem;
+        }
+​
+        span {
+            margin-left: 1rem;
+            font-size: 30px;
+
+            font-family: 'sega_logo_fontregular';
+
+        }
+
+        input {
+            margin-left: 5rem;
+            width: 40rem;
+            height: 2rem;
+            background-color: #C8D6E5;
+            border: 1px solid #5AB0C7;
+        }
+
+        .main {
+            background-color: #7960C0;
+            max-height: auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(4, 1fr); */
+            grid-gap: 20px;
+            padding-top: 30px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    </style>
+
 </head>
 
 <body>
-<div class="container">
-	<div class="row" id="search">
-		<form id="search-form" action="" method="POST" enctype="multipart/form-data">
-			<div class="form-group col-xs-9">
-				<input class="form-control" type="text" placeholder="Search" />
-			</div>
-			<div class="form-group col-xs-3">
-				<button type="submit" class="btn btn-block btn-primary">Search</button>
-			</div>
-		</form>
-	</div>
-	<div class="row" id="products">
-	</div>
-</div>
+
+    <div class="nav"><span>ROBOFRIENDS</span><input type="search" name="search" placeholder="Search robots">
+    </div>
+    <div class="main">
+
+    </div>
+
+    <script>
+
+        const robots = [{
+            id: 1,
+            name: 'Leanne Graham',
+            username: 'Bret',
+            email: 'Sincere@april.biz',
+            image: 'https://robohash.org/1?200x200'
+        },
+        {
+            id: 2,
+            name: 'Ervin Howell',
+            username: 'Antonette',
+            email: 'Shanna@melissa.tv',
+            image: 'https://robohash.org/2?200x200'
+        }
+
+            ,
+        {
+            id: 3,
+            name: 'Clementine Bauch',
+            username: 'Samantha',
+            email: 'Nathan@yesenia.net',
+            image: 'https://robohash.org/3?200x200'
+        }
+
+            ,
+        {
+            id: 4,
+            name: 'Patricia Lebsack',
+            username: 'Karianne',
+            email: 'Julianne.OConner@kory.org',
+            image: 'https://robohash.org/4?200x200'
+        }
+
+            ,
+        {
+            id: 5,
+            name: 'Chelsey Dietrich',
+            username: 'Kamren',
+            email: 'Lucio_Hettinger@annie.ca',
+            image: 'https://robohash.org/5?200x200'
+        }
+
+            ,
+        {
+            id: 6,
+            name: 'Mrs. Dennis Schulist',
+            username: 'Leopoldo_Corkery',
+            email: 'Karley_Dach@jasper.info',
+            image: 'https://robohash.org/6?200x200'
+        }
+
+            ,
+        {
+            id: 7,
+            name: 'Kurtis Weissnat',
+            username: 'Elwyn.Skiles',
+            email: 'Telly.Hoeger@billy.biz',
+            image: 'https://robohash.org/7?200x200'
+        }
+
+            ,
+        {
+            id: 8,
+            name: 'Nicholas Runolfsdottir V',
+            username: 'Maxime_Nienow',
+            email: 'Sherwood@rosamond.me',
+            image: 'https://robohash.org/8?200x200'
+        }
+
+            ,
+        {
+            id: 9,
+            name: 'Glenna Reichert',
+            username: 'Delphine',
+            email: 'Chaim_McDermott@dana.io',
+            image: 'https://robohash.org/9?200x200'
+        }
+
+            ,
+        {
+            id: 10,
+            name: 'Clementina DuBuque',
+            username: 'Moriah.Stanton',
+            email: 'Rey.Padberg@karina.biz',
+            image: 'https://robohash.org/10?200x200'
+        }
+
+        ];
+
+      
+        const main = document.getElementsByClassName("main")[0];
+
+        const input = document.getElementsByTagName("input")[0]
+
+        //Displaying the cards
+
+        robots.forEach((item) => {
+
+            let card = document.createElement("div");
+
+            card.setAttribute("class", "card");
+
+            card.style.backgroundColor = "#4EBEC3";
+
+            card.style.borderRadius = "5%"
+
+            card.style.height = "25rem";
+
+            card.style.maxWidth = "100%";
+
+            let img = document.createElement("img");
+
+            img.src = item.image;
+
+            img.setAttribute("style", "width: 80%; height: 70%; margin-top: 20px; margin-left: 30px");
+
+            img.style.borderRadius = "50%"
+
+            img.style.backgroundColor = "#303952"
+
+            card.append(img);
+
+            let name = document.createElement("div");
+
+            name.setAttribute("class", "name");
+
+            name.setAttribute("style", "margin-top: 10px; margin-left: 30px; font-weight: bold; font-size: 25px");
+
+            name.textContent = item.name;
+
+            card.append(name);
+
+            let email = document.createElement("div");
+
+            email.setAttribute("style", "margin-top: 5px; margin-left: 30px");
+
+            email.textContent = item.email;
+
+            card.append(email);
+
+            main.append(card);
+
+        });
+
+
+        //Filtering the cards
+
+        input.addEventListener("keyup", function () {
+
+            let name = document.getElementsByClassName("name");
+
+            let search = input.value.toUpperCase()
+
+            for (x of name) {
+
+                let textName = x.innerText.toUpperCase();
+
+                // console.log(textName.includes(search))
+
+                if (textName.includes(search)) {
+
+                    x.parentElement.style.display = ""
+
+                } else {
+                    
+                    x.parentElement.style.display = "none"
+                }
+            }
+        })
+
+    </script>
+
 </body>
 
 </html>
