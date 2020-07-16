@@ -1,0 +1,57 @@
+/* Mixin's reutilisable par la suite */  
+@mixin transition {
+-webkit-transition: all 0.5s ease-in-out; // compatibility
+-moz-transition: all 0.5s ease-in-out; // compatibility
+transition: all 0.5s ease-in-out;
+}
+@mixin corners {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+border-radius: $radius; 
+}
+
+body {
+background-image : url("http://www.fondsecran.eu/a/get_photo/193565/1920/1200.jpg");
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+height:100%;
+}
+
+.wrapper {
+width: 800px;
+margin: 200px auto;
+color:#fff;
+text-align:center;
+}
+
+h1 {
+  color : darkorange;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+#seconds, #tens{
+  font-size:2em;
+}
+
+button{
+@include corners ;
+border-radius : 30px;
+background:orange;
+color: #fff;
+border: solid 1px #fff;
+text-decoration:none;
+cursor:pointer;
+font-size:1.2em;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+outline: none;
+  &:hover{
+  @include transition;
+  background:#fff;
+  border: solid 1px #fff;
+  color:orange;
+  }
+}

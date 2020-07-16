@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Promises</title>
+</head>
+
+<body>
+
+	<script>
+
+// 1 & 2
+	const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('success');
+  }, 400);
+});
+promise1.then((value) => {
+  console.log(value);
+  // expected output: "success"
+});
+
+// 3 & 4	
+const promise2 = Promise.resolve('success');
+
+promise2.then((value) => {
+  console.log(value); // expected output: "success"
+  return Promise.reject('Ooops something went wrong');
+}).catch((error) => {
+	console.log(error);
+});
+
+</script>
+
+</body>
+
+</html>

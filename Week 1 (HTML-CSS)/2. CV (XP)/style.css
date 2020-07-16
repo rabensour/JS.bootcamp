@@ -1,0 +1,19 @@
+.name {
+  text-align : center;
+  border : 5px orange groove;
+  color : maroon;
+}
+#head {
+  background : url(image-css.jpg);
+}
+
+.photo {
+  border-radius:50%;
+  margin-left: auto;
+  margin-right: auto;
+  width : 11em;
+}
+
+h2 {
+  color:maroon;
+}

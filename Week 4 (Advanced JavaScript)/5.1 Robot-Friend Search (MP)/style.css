@@ -1,0 +1,15 @@
+body {
+	padding-top: 30px;
+	background-color : #483D8B;
+}
+.product {
+	margin-bottom: 30px;
+}
+.product-inner {
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	padding: 10px;
+	background-color : #008B8B;
+}
+.product img {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+*{
+        margin : 0;
+        padding :0;
+}
+      
+.button {
+        width: 70px;
+        height: 70px;
+        font-size : 25px;
+        margin : 1px;
+        cursor : pointer;
+  background-color : yellowgreen;
+}
+
+.textview {
+        width : 290px;
+        height : 40px;
+        margin : 2px;
+        font-size : 25px;;
+}
+
+.main {
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translateX(-50%) translateY(-50%)
+}
