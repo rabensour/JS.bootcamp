@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#body {
+  min-height: 30vh;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Gill Sans","Gill Sans MT",Calibri,"Trebuchet MS",sans-serif;
+}
+.header {
+  background-color: #f4511e;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  height: 170px;
+  padding: 30px;
+}
+
+.header-title {
+    font-size: 50px;
+}
+
+.section {
+  flex-flow: row wrap;
+  width: 90%;
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section > div {
+  padding: 30px;
+}
+.small-div {
+  width: 20%;
+}
+.fa-building, .fa-globe-africa, .fa-landmark {
+  font-size: 120px;
+  color: #f4511e;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+.big-div {
+  width: 80%;
+}
+.div-title {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-container {
+  flex-flow: column;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#sect1 {
+  width: 100%;
+}
+
+#sect2 {
+  width: 100%;
+}
+
+.contact-form > div {
+  width: 500px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px;
+}
+
+.input-field {
+  height: 40px;
+  margin: 15px 0;
+}
+
+.contact-btn {
+  margin-top: 15px;
+  height: 40px;
+  color: white;
+  border: 0;
+  background-color: #f4511e;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 725px) {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .small-div {
+    width: 80%;
+  }
+
+  .fa-building{
+    display: flex;
+    justify-content: center;
+  }
+
+  .fa-globe-africa{
+    display: flex;
+    justify-content: center;
+  }
+
+  .fa-landmark{
+    display: flex;
+    justify-content: center;
+  }
+}
